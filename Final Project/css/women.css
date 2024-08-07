@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; 
+    background-color: #f0f0f0; 
+    font-family: Arial, sans-serif; /* Set default font family */
+}
+
+.card-container {
+    display: flex;
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background-color: white; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Hide overflow content */
+    width: 300px; /* Fixed card width */
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s; /* Smooth transform transition */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.card img {
+    width: 100%; /* Full width image */
+    height: 400px;
+    object-fit: cover; /* Cover entire container */
+}
+
+.card-content {
+    position: absolute;
+    bottom: 10px; /* Position content at bottom */
+    width: 100%; 
+    text-align: center; /* Center text */
+    display: flex;
+    justify-content: center; /* Center content */
+}
+
+.hover-button {
+    display: none; /* Hide button by default */
+    background-color: black; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.card:hover .hover-button {
+    display: inline-block; /* Show button on card hover */
+}

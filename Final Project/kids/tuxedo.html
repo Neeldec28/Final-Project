@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendz Tuxedo</title>
+
+    <!--css file-->
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+    <main class="main-content">
+        <div class="product-page">
+            <div class="product-images">
+                <!--contains images for the slideshow-->
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="../img/kids/Tuxedo/blue.jpg" alt="Blue Tuxedo">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="../img/kids/Tuxedo/cream.jpg" alt="Cream Tuxedo">
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>Tuxedo</h1>
+                <p class="price">$100</p>
+                <p class="description">A comfortable and stylish Tuxedo for kids. Made from high-quality material.</p>
+                
+                <!-- Color Options with Images -->
+                <div class="color-options">
+                    <p>Color:</p>
+                    <div class="color-image-container">
+                        <input type="radio" id="color-b;ue" name="color" value="blue" checked>
+                        <label for="color-blue"><img src="../img/kids/Tuxedo/blue.jpg" alt="Blue Tuxedo" class="color-image"></label>
+
+                        <input type="radio" id="color-cream" name="color" value="cream">
+                        <label for="color-cream"><img src="../img/kids/Tuxedo/cream.jpg" alt="Cream Tuxedo" class="color-image"></label>
+                    </div>
+                </div>
+
+                <!-- Size Options as Buttons -->
+                <div class="size-options">
+                    <p>Size:</p>
+                    <div class="size-button-container">
+                        <input type="radio" id="size-s" name="size" value="S">
+                        <label for="size-s" class="size-button">S</label>
+
+                        <input type="radio" id="size-m" name="size" value="M">
+                        <label for="size-m" class="size-button">M</label>
+
+                        <input type="radio" id="size-l" name="size" value="L">
+                        <label for="size-l" class="size-button">L</label>
+
+                        <input type="radio" id="size-xl" name="size" value="XL">
+                        <label for="size-xl" class="size-button">XL</label>
+                    </div>
+                </div>
+                
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--this contains meta-->
+    <div id="meta-container"></div>
+
+     <!--js file-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script> 
+    
+</head>
+<body>
+    <!--this contains header-->
+    <div id="header-container"></div>
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="banner"></div>
+            <div class="overlay">
+                <h1>Latest trendz</h1>
+                <a href="./shop.html" class="shop-now-button">SHOP NOW</a>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <div id="about-us" class="hidden">
+            <div class="section-content">
+                <h2>About Trendz</h2>
+                <p>Welcome to Trendz, your ultimate destination for stylish and cozy winter clothing. At Trendz, we believe that staying warm should never mean sacrificing style...</p>
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div id="contact-us" class="hidden">
+            <div class="section-content">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! For any questions or assistance, please reach out:</p>
+                <ul>
+                    <li>Email: support@trendz.com</li>
+                    <li>Phone: +1 (800) 123-4567</li>
+                    <li>Hours: Mon-Fri, 9 AM - 6 PM (EST)</li>
+                    <li>Designed by Dev Prajapati and Neel Hingrajiya</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!--This contains the footer-->
+    <div id="footer-container"></div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="wrapper">
+                <!--login form-->
+                <form action="">
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Username" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <div class="remember-forget">
+                        <label> <input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>    
+                    <div class="register-link">
+                        <p>Don't have an account? <a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

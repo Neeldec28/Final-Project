@@ -1,0 +1,229 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    font-family: Arial, sans-serif; 
+}
+
+body, html {
+    height: 100%; /* Ensure full height */
+    background-color: #F5F5F5; 
+    color: #333;
+}
+
+.main-content {
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 1rem; 
+}
+
+.product-page {
+    display: flex;
+    width: 100%;
+    max-width: 1400px; /* Maximum width for content */
+    height: 90vh;
+    gap: 2rem; 
+    background-color: white;
+    padding: 2rem; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide overflow content */
+}
+
+.mySlides {
+    position: absolute;
+    top: 30%; 
+    left: 0;
+    padding-left: 50px;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+}
+
+.mySlides img {
+    width: 70%; 
+    height: auto; 
+    object-fit: cover; /* Cover entire container */
+    border-radius: 8px; 
+}
+
+/* Slideshow animations */
+.mySlides:nth-child(1) { animation: slideshow 9s linear infinite 0s; }
+.mySlides:nth-child(2) { animation: slideshow 9s linear infinite 3s; }
+.mySlides:nth-child(3) { animation: slideshow 9s linear infinite 6s; }
+
+@keyframes slideshow {
+    0%, 33.33% { opacity: 1; }
+    33.34%, 100% { opacity: 0; }
+}
+
+.product-details {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    overflow-y: auto; 
+    padding-right: 1rem; 
+}
+
+.product-details h1 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 1rem; 
+}
+
+.price {
+    font-size: 1.8rem; /* Large price text */
+    color: #e74c3c; 
+    margin-bottom: 1rem; 
+}
+
+.description {
+    margin-bottom: 1.5rem; 
+    color: #555; 
+    line-height: 1.6; /* Line height for readability */
+    font-size: 1.1rem; /* Font size for description */
+}
+
+.color-options, .size-options {
+    margin-bottom: 1.5rem;
+}
+
+.color-options p, .size-options p {
+    margin-bottom: 0.5rem; /* Space below paragraph */
+    font-weight: bold;
+    font-size: 1.2rem; 
+}
+
+.color-image-container {
+    display: flex;
+    gap: 1rem; 
+}
+
+.color-image-container input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+.color-image {
+    width: 60px; 
+    height: 50px; 
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 2px solid transparent; /* Transparent border */
+    transition: border-color 0.1s; /* Smooth border color transition */
+}
+
+.color-image-container input[type="radio"]:checked + label .color-image {
+    border-color: #333; /* Dark grey border for selected image */
+}
+
+.size-button-container {
+    display: flex;
+    gap: 1rem; 
+}
+
+.size-button-container input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+.size-button {
+    padding: 0.75rem 1.5rem; 
+    border: 1px solid #ccc; 
+    background-color: white; 
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; 
+    display: inline-block; 
+    font-size: 1.1rem; 
+}
+
+.size-button-container input[type="radio"]:checked + .size-button {
+    background-color: #333; 
+    color: white; 
+}
+
+.buy-button {
+    background-color: #333; 
+    color: #fff; 
+    border: none;
+    padding: 1rem 2rem; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    transition: background-color 0.3s; /* Smooth background color transition */
+    font-size: 1.2rem; 
+    margin-top: 1.5rem; 
+    align-self: flex-start; /* Align button to start */
+}
+
+.buy-button:hover {
+    background-color: #555;
+}
+/* media query to make Responsive */ 
+@media (max-width: 1024px) {
+    .product-page {
+        flex-direction: column; 
+        height: auto; 
+        max-height: none; 
+    }
+
+    .product-images, .product-details {
+        width: 100%; /* Full width */
+    }
+
+    .slideshow-container {
+        height: 50vh; 
+    }
+
+    .product-details {
+        padding-right: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 0.5rem; 
+    }
+
+    .product-page {
+        padding: 1rem; 
+    }
+
+    .product-details h1 {
+        font-size: 2rem; 
+    }
+
+    .price {
+        font-size: 1.5rem; 
+    }
+
+    .description, .color-options p, .size-options p, .size-button, .buy-button {
+        font-size: 1rem; 
+    }
+
+    .color-image {
+        width: 50px; 
+        height: 50px; 
+    }
+
+    .size-button {
+        padding: 0.5rem 1rem; 
+    }
+
+    .buy-button {
+        padding: 0.75rem 1.5rem; 
+    }
+}

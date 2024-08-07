@@ -1,0 +1,270 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  font-family: "Poppins", sans-serif; /* Set default font family */
+}
+
+body {
+  font-family: Arial, sans-serif; 
+  background-color: #ECF0F1;
+  line-height: 1.5; /* Improve readability with consistent line height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body covers full viewport height */
+}
+
+main {
+  flex: 1; /* Allow main content to grow and fill available space */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically and horizontally */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Padding around card container */
+  flex-wrap: wrap; /* Allow cards to wrap */
+}
+
+.card {
+  background-color: white; /* White background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Hide overflow content */
+  width: 300px; /* Fixed card width */
+  text-align: center; /* Center text */
+  position: relative;
+  transition: transform 0.2s; /* Smooth transform transition */
+  margin-bottom: 20px; /* Space between rows of cards */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.card img {
+  width: 100%; /* Full width image */
+  height: 400px; /* Fixed height for images */
+  object-fit: cover; /* Cover entire container */
+}
+
+.card-content {
+  position: absolute;
+  bottom: 10px; /* Position content at bottom */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hover-button {
+  display: none; /* Hide button by default */
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded button corners */
+  cursor: pointer;
+}
+
+.card:hover .hover-button {
+  display: inline-block; /* Show button on card hover */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000; /* Black background */
+  padding: 1rem;
+  color: white; /* White text */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.navbar-brand img {
+  height: 38px; /* Logo height */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between links */
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+}
+
+.navbar-links a:hover {
+  color: #34495E; /* Change color on hover */
+}
+
+/* Footer styles */
+.container {
+  max-width: 1170px; /* Maximum width for content */
+  margin: auto; 
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+ul {
+  list-style: none; /* Remove default list style */
+}
+
+.footer {
+  background-color: #000000; /* Black background */
+  padding: 40px 0 20px 0;
+  width: 100%;
+  z-index: 1000;
+  margin-top: auto; 
+}
+
+.footer-col {
+  width: 25%; /* Column width */
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: ''; 
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none; 
+  font-weight: 300;
+  color: #fff;
+  display: block; 
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.footer-col ul li a:hover {
+  color: #34495E;
+  padding-left: 8px; 
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%; /* Circular icons */
+  color: #fff;
+  transition: all 0.5s ease; /* Smooth transition */
+}
+
+.footer-col .social-links a:hover {
+  color: #34495E;
+  background-color: #ffffff; /* Change background on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .navbar-links {
+    gap: 0.5rem; /* Reduce space between links */
+  }
+  .navbar-links a {
+    font-size: 14px; /* Smaller font size for links */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+  }
+  .card {
+    width: 90%; /* Make cards full width */
+  }
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    margin: 0 10px 10px 10px;
+  }
+
+  .navbar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-left: 55%;
+  }
+
+  .navbar-links a {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+  .footer-col {
+    width: 100%; /* Full width columns */
+    margin-bottom: 20px; /* Space between columns */
+  }
+}
+
+@media (max-width: 555px) {
+  .navbar {
+    padding: 0.5rem; /* Reduce padding */
+  }
+  .navbar-brand img {
+    height: 30px; /* Smaller logo */
+  }
+
+  .navbar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-left: 30%;
+  }
+  .navbar-links a {
+    font-size: 12px; /* Smaller font size for links */
+  }
+  .footer {
+    padding: 20px 0 10px 0; /* Reduce padding */
+  }
+  .footer-col h4 {
+    font-size: 16px; /* Smaller heading size */
+  }
+  .footer-col ul li a {
+    font-size: 14px; /* Smaller font size for links */
+  }
+}
